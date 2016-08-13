@@ -18,6 +18,7 @@ class Pizza(BaseDominos):
         super(Pizza, self).__init__()
         self.quantity = quantity
         self.size = size
+	self.quantity = quantity
 
     def get_bill(self):
         '''Final amount'''
