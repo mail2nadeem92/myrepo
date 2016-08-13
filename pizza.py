@@ -1,23 +1,25 @@
-class BaseDominos:
+class BaseDominos(object):
     '''A base class'''
+    def __init__(self):
+	
+        self.pizza_size = dict(
+			small=1,
+			regular=2,
+			large=4,
+			default=1)
+
     def __repr__(self):
         return 'Dominos Pizza Inc.'
 
 
 class Pizza(BaseDominos):
     '''This class takes size and quantity'''
-    def __init__(self, size='xyz', quantity=1):
-	self.quantity = quantity
-	if size == 'small':
-		self.size = 1
-	elif size == 'regular':
-		self.size = 2
-	elif size == 'large':
-		self.size = 4
-	elif size == 'default':
-		self.size = 1
+    def __init__(self, size='default', quantity=1):
+        super(Pizza, self).__init__()
+        self.quantity = quantity
+        self.size = size
 
     def get_bill(self):
         '''Final amount'''
-        return 124*self.size*self.quantity
+        return 124*self.pizza_size[self.size]*self.quantity
 
