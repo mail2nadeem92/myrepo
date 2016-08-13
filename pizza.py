@@ -14,7 +14,7 @@ class Pizza(BaseDominos):
 		self.size = 2
 	elif size == 'large':
 		self.size = 4
-	else:
+	elif size == 'default':
 		self.size = 1
 
     def get_bill(self):
