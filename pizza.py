@@ -6,7 +6,7 @@ class BaseDominos:
 
 class Pizza(BaseDominos):
     '''This class takes size and quantity'''
-    def __init__(self, size='default', quantity=1):
+    def __init__(self, size='xyz', quantity=1):
 	self.quantity = quantity
 	if size == 'small':
 		self.size = 1
